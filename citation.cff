@@ -2,7 +2,7 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-title: FabManager Scraping
+title: FabManager Data Analyzer
 message: >-
   If you use this software, please cite it using the
   metadata from this file.
@@ -15,18 +15,19 @@ authors:
       University of Applied Sciences and Arts of Southern
       Switzerland
     orcid: 'https://orcid.org/0009-0003-4769-9568'
-repository-code: 'https://github.com/zumatt/FabManager-Scraping/'
+repository-code: 'https://github.com/zumatt/FabManager-Data-Analyzer/'
 abstract: >-
-  This project provides interactive Jupyter notebooks to
-  extract data from FabManager platforms. FabManager is a
-  management system for Fab Labs and makerspaces. These
-  notebooks allow administrators to export user data,
+  This project provides a python package to
+  extract and analyse data from FabManager platforms using the API already pre-installed.
+  FabManager is a management system for Fab Labs and makerspaces.
+  The package allow administrators to export user data,
   machine information, reservations, and training records in
   JSON format for backup, analysis, or migration purposes.
 keywords:
   - FabManager
   - Scrape FabManager data
   - Extract FabManager data
+  - Analyse FabManager data
 license: AGPL-3.0
-version: '1'
+version: '2'
 date-released: '2025-12-02'
