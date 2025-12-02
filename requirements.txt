@@ -1,8 +1,0 @@
-# Core modules (mandatory) — required to run the notebook UI
-jupyterlite-core==0.7.0
-jupyterlab~=4.5.0
-notebook~=7.5.0
-jupyterlite-pyodide-kernel==0.7.0
-
-# Additional modules (optional) — required to run the code inside the notebook in Local environments
-requests==2.31.0
