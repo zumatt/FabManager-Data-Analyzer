@@ -1,6 +1,6 @@
 # FabManager Data Analyzer
 
-[![View FabManager-Scraping on GitHub](https://img.shields.io/github/stars/zumatt/FabManager-Scraping?color=232323&label=FabManager-Scraping&logo=github&labelColor=232323)](https://github.com/zumatt/FabManager-Scraping)
+[![DOI](https://zenodo.org/badge/1108603832.svg)](https://doi.org/10.5281/zenodo.17830281)
 
 A Python package for extracting, anonymizing, and analyzing data from FabManager using the Open API.
 
