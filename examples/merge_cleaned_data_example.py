@@ -18,7 +18,8 @@ merged_data, output_path = merge_cleaned_data(
     #data_steward='Your name or organization', # Optional: specify data steward, in case not specified taken from the first file
     #data_curator='Your name or organization', # Optional: specify data curator, in case not specified taken from the first file
     #data_exported_from='FabManager instance at YourFabManagerDomain.com', # Optional: specify data exported from, in case not specified taken from the first file
-    #license='Your chosen license' # Optional: specify license, in case not specified taken from the first file
+    #license='Your chosen license', # Optional: specify license, in case not specified taken from the first file
+    #timezone='UTC', # Optional: specify timezone, in case not specified taken from the first file
 )
 
 print(60*"-")

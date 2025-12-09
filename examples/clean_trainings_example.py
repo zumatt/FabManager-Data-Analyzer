@@ -20,7 +20,8 @@ trainings, output_path = clean_trainings_data(
     data_steward='Your name or organization',
     data_curator='Your name or organization',
     data_exported_from='FabManager instance at YourFabManagerDomain.com',
-    license='Your chosen license'
+    license='Your chosen license',
+    timezone='UTC',
 )
 
 print(60*"-")

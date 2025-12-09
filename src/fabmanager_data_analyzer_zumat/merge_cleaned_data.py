@@ -22,6 +22,7 @@ def merge_cleaned_data(
     data_curator: Optional[str] = None,
     data_exported_from: Optional[str] = None,
     license: Optional[str] = None,
+    timezone: Optional[str] = None,
 ) -> Tuple[Dict, str]:
     """
     Merge cleaned FabManager data from multiple sources into a single dataset.
@@ -40,6 +41,7 @@ def merge_cleaned_data(
         data_curator: Data curator (optional, if not provided, taken from first file)
         data_exported_from: Source URL (optional, if not provided, taken from first file)
         license: License information (optional, if not provided, taken from first file)
+        timezone: Timezone information (optional, if not provided, taken from first file)
 
     Returns:
         Tuple of (merged_data_dict, output_filepath)
@@ -56,7 +58,8 @@ def merge_cleaned_data(
         ...     reservations_machine_data_path='cleaned_reservations_machine.json',
         ...     reservations_training_data_path='cleaned_reservations_training.json',
         ...     data_owner='Your Organization Name or Person',
-        ...     license='License Name'
+        ...     license='License Name',
+        ...     timezone='UTC'
         ... )
         >>> print(f"Merged data saved to: {output_path}")
     """
@@ -116,6 +119,8 @@ def merge_cleaned_data(
                 ]
             if license is None and "license" in file_metadata:
                 merged_metadata["license"] = file_metadata["license"]
+            if timezone is None and "timezone" in file_metadata:
+                merged_metadata["timezone"] = file_metadata["timezone"]
 
             metadata_from_first_file = True
 
@@ -166,6 +171,8 @@ def merge_cleaned_data(
         merged_metadata["data_exported_from"] = data_exported_from
     if license is not None:
         merged_metadata["license"] = license
+    if timezone is not None:
+        merged_metadata["timezone"] = timezone
 
     # Generate output filename if not provided
     output_path: Union[str, Path]

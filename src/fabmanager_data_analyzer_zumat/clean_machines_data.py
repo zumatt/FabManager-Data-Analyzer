@@ -317,6 +317,7 @@ def clean_machines_data(
     data_exported_from: Optional[str] = None,
     data_exported_at: Optional[str] = None,
     license: Optional[str] = None,
+    timezone: Optional[str] = None,
 ) -> Tuple[List[Dict], str]:
     """
     Clean machine data from an exported JSON file.
@@ -352,6 +353,7 @@ def clean_machines_data(
                          If not provided, automatically extracted from input filename if it follows the
                          FabManager export format: *_DD_MM_YYYY_HH-MM.json
         license: License information for the cleaned dataset (optional, added to metadata)
+        timezone: Timezone information, ISO 8601 format (e.g., 'UTC'), for timestamp fields (optional, added to metadata)
 
     Returns:
         Tuple of (cleaned_machines_list, output_filepath)
@@ -452,6 +454,8 @@ def clean_machines_data(
         metadata["data_exported_at"] = data_exported_at
     if license is not None:
         metadata["license"] = license
+    if timezone is not None:
+        metadata["timezone"] = timezone
 
     # Save cleaned data
     output_data = {"machines": cleaned_machines, "metadata": metadata}

@@ -264,6 +264,7 @@ def clean_trainings_data(
     data_exported_from: Optional[str] = None,
     data_exported_at: Optional[str] = None,
     license: Optional[str] = None,
+    timezone: Optional[str] = None,
 ) -> Tuple[List[Dict], str]:
     """
     Clean and transform training data from FabManager export.
@@ -294,6 +295,7 @@ def clean_trainings_data(
                          If not provided, automatically extracted from input filename if it follows
                          the FabManager export format: *_DD_MM_YYYY_HH-MM.json
         license: License under which the data is published (optional, added to metadata)
+        timezone: Timezone information, ISO 8601 format (e.g., 'UTC'), for timestamp fields (optional, added to metadata)
 
     Returns:
         Tuple of (list of cleaned training records, path to output file)
@@ -314,7 +316,8 @@ def clean_trainings_data(
         ...     created_at_mode='only_date',
         ...     include_nb_total_places=True,
         ...     data_owner='Your Organization Name or Person',
-        ...     license='License Name'
+        ...     license='License Name',
+        ...     timezone='UTC'
         ... )
         >>> len(trainings)
         123456
@@ -392,6 +395,8 @@ def clean_trainings_data(
         metadata["data_exported_at"] = data_exported_at
     if license is not None:
         metadata["license"] = license
+    if timezone is not None:
+        metadata["timezone"] = timezone
 
     if metadata:
         output_data["metadata"] = metadata
