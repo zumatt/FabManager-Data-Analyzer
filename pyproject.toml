@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fabmanager-data-analyzer-zumat"
-version = "0.2.0"
+version = "0.2.1"
 description = "A Python package for extracting, anonymizing, and analyzing data from FabManager using the Open API"
 readme = "README.md"
 requires-python = ">=3.9"

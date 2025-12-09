@@ -74,3 +74,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Support for both anonymized and pseudo-anonymized data exports
 - HTML content cleaning for machine descriptions
 - Linked data URI generation for resources
+
+
+## [0.2.1] - 2025-12-09
+
+### Added
+- Timestamp metadata preservation for data integrity
