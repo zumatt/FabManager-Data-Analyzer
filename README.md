@@ -47,9 +47,25 @@ Export and clean data from FabManager for publication as [Open Data](https://en.
 
 ### Install from GitHub
 
+It is suggested to create a virtual environment to install the package by doing the following:
+
+**On macOS/Linux:**
 ```bash
+mkdir testFabManagerExport && cd testFabManagerExport && python -m venv venv
+source venv/bin/activate
 pip install git+https://github.com/zumatt/FabManager-Data-Analyzer.git
 ```
+
+**On Windows:**
+```bash
+mkdir testFabManagerExport
+cd testFabManagerExport
+python -m venv venv
+venv\Scripts\activate
+pip install git+https://github.com/zumatt/FabManager-Data-Analyzer.git
+```
+
+To use the installed package you can easily select an example and execute it.
 
 ### Install for development
 
